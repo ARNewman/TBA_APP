@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="jquery.m.min.css" type="text/javascript"/>
+<link rel="stylesheet" href="menu.css" type="text/javascript"/>
+<script src="jquery.js" type="text/javascript"></script>
+<script src="jquery.m.min.js" type="text/javascript"></script>
+<script src="results.js"></script>
+<meta name="viewport" content="width=device-width", initial-scale="1">
+
+<script>
+$(document).ready(function(){
+
+$("#btn").click(function(){
+	$("#menu").toggle();
+});
+
+	$("#m1").listview("refresh");
+	$("#m2").listview("refresh");
+		
+
+});
+
+</script>
+</head>
+
+<body>
+
+<section id="a_mens" data-role="page">
+
+<div id="header" data-role="header" data-position="fixed">
+
+	<div id="menubtn">
+    
+    	<button id="btn"></button>
+    
+    </div>
+	
+			<div id="hname">
+				<h1> A-Grade Mens </h1>
+			</div>	
+			
+			
+</div>
+
+	<div class="ui-content" style="padding: 0% 1% 1% 1%; margin: 0% 1% 1% 1%;">
+
+
+
+<ul id="menu" hidden="hidden" data-role="listview" data-iconpos="none">
+			
+            <li><a href="index.html" rel="external">News</a></li>
+            <li><a href="login.html" rel="external">Login</a></li>
+            <li><a href="player.html" rel="external">Player Profiles</a></li>
+            <li style= "color: #1e73be;">Competition Times</li>
+            <li><a href="a1.html" rel="external">A-Grade Mens</a></li>
+            <li><a href="a2.html" rel="external">A-Reserve Mens</a></li>
+            <li><a href="b1.html" rel="external">B-Grade Mens</a></li>
+            <li><a href="w1.html" rel="external">A-Grade Womens</a></li>
+            <li><a href="results.html" rel="external"  style= "font-size: 16px; background-color:white; color: #1e73be;">Results - All Grades</a></li>
+        
+    	</ul>
+
+<div id="m1">
+<h1 style="color: #1e73be;"> A-Grade Mens</h1>
+<table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive">
+  <thead>
+    <tr>
+      <th data-priority="persist">Team</th>
+      <th data-priority="2">Wins</th>
+      <th data-priority="3">losses</th>
+      <th data-priority="4">Points</th>
+    </tr>
+  </thead>
+  <tbody id="update">
+    
+      
+   </tbody>
+</table>
+</div>
+
+<div id="m2">
+<h1 style="color: #1e73be;" > A-Reserve Mens</h1>
+<table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive">
+  <thead>
+    <tr>
+      <th data-priority="persist">Team</th>
+      <th data-priority="2">Wins</th>
+      <th data-priority="3">losses</th>
+      <th data-priority="4">Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      
+      <td>USQ Bobcats</td>
+      <td>5</td>
+      <td>2</td>
+      <td>140</td>
+    </tr>
+    <tr>
+      
+      <td>Runnin' Rebels</td>
+      <td>4</td>
+      <td>3</td>
+      <td>64</td>
+    </tr>
+    <tr>
+     
+      <td>Lions</td>
+      <td>3</td>
+      <td>4</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      
+      <td>Gators</td>
+      <td>2</td>
+      <td>5</td>
+      <td>-30</td>
+    </tr>
+    <tr>
+      
+      <td>Lightning</td>
+      <td>1</td>
+      <td>6</td>
+      <td>-60</td>
+    </tr>
+      </tbody>
+</table>
+</div>
+
+
+<div id="mens3">
+<h1 style="color: #1e73be;"> B-Grade Mens</h1>
+<table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive">
+  <thead>
+    <tr>
+      <th data-priority="persist">Team</th>
+      <th data-priority="2">Wins</th>
+      <th data-priority="3">losses</th>
+      <th data-priority="4">Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+
+      <td>USQ Bobcats</td>
+      <td>5</td>
+      <td>2</td>
+      <td>140</td>
+    </tr>
+    <tr>
+ 
+      <td>Runnin' Rebels</td>
+      <td>4</td>
+      <td>3</td>
+      <td>64</td>
+    </tr>
+    <tr>
+
+      <td>Lions</td>
+      <td>3</td>
+      <td>4</td>
+      <td>12</td>
+    </tr>
+    <tr>
+
+      <td>Gators</td>
+      <td>2</td>
+      <td>5</td>
+      <td>-30</td>
+    </tr>
+    <tr>
+
+      <td>Lightning</td>
+      <td>1</td>
+      <td>6</td>
+      <td>-60</td>
+    </tr>
+      </tbody>
+</table>
+</div>
+
+
+<div id="womens1" >
+<h1 style="color: #1e73be;"> A-Grade Womens</h1>
+<table data-role="table" id="movie-table" data-mode="reflow" class="ui-responsive">
+  <thead>
+    <tr>
+      <th data-priority="persist">Team</th>
+      <th data-priority="2">Wins</th>
+      <th data-priority="3">losses</th>
+      <th data-priority="4">Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+
+      <td>USQ Bobcats</td>
+      <td>5</td>
+      <td>2</td>
+      <td>140</td>
+    </tr>
+    <tr>
+
+      <td>Runnin' Rebels</td>
+      <td>4</td>
+      <td>3</td>
+      <td>64</td>
+    </tr>
+    <tr>
+
+      <td>Lions</td>
+      <td>3</td>
+      <td>4</td>
+      <td>12</td>
+    </tr>
+    <tr>
+
+      <td>Gators</td>
+      <td>2</td>
+      <td>5</td>
+      <td>-30</td>
+    </tr>
+    <tr>
+
+      <td>Lightning</td>
+      <td>1</td>
+      <td>6</td>
+      <td>-60</td>
+    </tr>
+      </tbody>
+</table>
+</div>
+
+</div>
+
+
+<div id="footer" data-role="footer" data-position="fixed">
+
+	<h3>Toowoomba Basketball Association</h3>
+
+</div>
+</section>
+</body>
+</html>
