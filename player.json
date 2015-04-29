@@ -1,0 +1,9 @@
+{
+    "player": {
+        "name": "Bob",
+        "team": "USQ",
+        "clubs": "Postels",
+        "favTeam": "Cavs",
+        "from": "Ohio"
+    }
+}
