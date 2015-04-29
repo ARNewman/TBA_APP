@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="jquery.m.min.css" type="text/javascript"/>
+<link rel="stylesheet" href="menu.css" type="text/javascript"/>
+<script src="jquery.js" type="text/javascript"></script>
+<script src="jquery.m.min.js" type="text/javascript"></script>
+
+<meta name="viewport" content="width=device-width", initial-scale="1" minimum-scale="1.0", maximum-scale="1.0", user-scalable="no">
+
+
+<script>
+$(document).ready(function(){
+
+
+
+$("#btn").click(function(){
+	$("#menu").toggle();
+});
+
+$("#createbtn").click(function(){
+
+	var grade=$("#grade").val();
+	var home=$("#home").val();
+	var away=$("#away").val();
+	var date=$("#date").val();
+	var week=$("#week").val();
+	
+	
+	
+	var dataString = 'grade='+grade+'&home='+home+'&away='+away+'&date='+date+'&week='+week;
+	
+	if(grade!="" && home!="" && away!="" &&  date !="" && week !=""){
+		
+		$.ajax({
+type: "POST",
+url: "public/create.php",
+data: dataString,
+beforeSend: function(){ $("#createbtn").val('Connecting...');},
+success: function(data){
+
+if(data)
+{
+
+
+document.location='adminPanel.html';
+}
+else
+{
+//Error.
+alert(data);
+
+$("#createbtn").val('create')
+$("#error").html("<span style='color:#cc0000'>Error:</span> There was an error in your input. Please ensure neither team is playing and no other team is playing at that time. ");
+}
+}
+});
+}
+return false;
+});
+
+$("#select").selectmenu("refresh");
+
+});
+
+</script>
+
+</head>
+
+<body>
+
+<section id="createPage" data-role="page">
+
+<div id="header" data-role="header" data-position="fixed">
+
+	<div id="menubtn">
+    
+    	<button id="btn"></button>
+    
+    </div>
+	
+			<div id="hname">
+				<h1> Create Schedule </h1>
+			</div>	
+			
+			
+</div>
+
+	<div class="ui-content" style="padding: 0% 1% 1% 1%; margin: 0% 1% 1% 1%;">
+
+
+
+<ul id="menu" hidden="hidden" data-role="listview" data-iconpos="none">
+			
+            <li><a href="index.html" rel="external">News</a></li>
+            <li><a href="login.html" rel="external">Login</a></li>
+            <li><a href="player.html" rel="external">Player Profiles</a></li>
+            <li style= "color: #1e73be;">Competition Times</li>
+            <li><a href="a1.html" rel="external">A-Grade Mens</a></li>
+            <li><a href="a2.html" rel="external">A-Reserve Mens</a></li>
+            <li><a href="b1.html" rel="external">B-Grade Mens</a></li>
+            <li><a href="w1.html" rel="external">A-Grade Womens</a></li>
+            <li><a href="results.html" rel="external"  style= "font-size: 16px; background-color:white; color: #1e73be;">Results - All Grades</a></li>
+        
+    	</ul>
+
+<div id="create">
+
+
+	
+		
+			<h1> Create Games </h1>
+			
+			<div id="box">
+<form data-ajax="false" action="" method="post">
+Grade: (Mens A: 1, Mens A-reserve: 2, Mens B: 3, Womens: 4)
+<input type="text" class="input" name="grade" id="grade"/>
+Week:
+<input type="text" class="input" name="week" id="week"/>
+<label for="select-choice-0" class="select">Home Team:</label>
+<select name="select-choice-0" id="home">
+  <option value="1">Old Neers (A)</option>
+  <option value="2">Protech Electrical (A)</option>
+  <option value="3">Tropics (A)</option>
+  <option value="4">All Stars (A)</option>
+  <option value="5">Eagles (A)</option>
+  <option value="6">The Joes (A)</option>
+  <option value="7">Eagles Mr Rental (A-Res)</option>
+  <option value="8">Mammoths (A-Res)</option>
+  <option value="9">USQ International (A-Res)</option>
+  <option value="10">Super Roosters (A-Res)</option>
+  <option value="11">All Stars Ballers United (A-Res)</option>
+  <option value="12">Oakey Hornets (A-Res)</option>
+  <option value="13">All Stars Bumblebees (B)</option>
+  <option value="14">Runnin Rebels Hawks (B)</option>
+  <option value="15">Runnin Rebels Beavers (B)</option>
+  <option value="16">Saint Hercules (B) </option>
+  <option value="17">Super Rosters (B)</option>
+  <option value="18">USQ Mammoths (B)</option>
+  <option value="19">Saints Steelers (W)</option>
+  <option value="20">Lions (W)</option>
+  <option value="21">Tigers (W)</option>
+  <option value="22">TBA U18 (W)</option>
+  <option value="23">All Stars (W)</option>
+  <option value="24">USQ Troopoers (W)</option>
+</select>
+<label for="select-choice-1" class="select">Away Team:</label>
+<select name="select-choice-1" id="away">
+  <option value="1">Old Neers (A)</option>
+  <option value="2">Protech Electrical (A)</option>
+  <option value="3">Tropics (A)</option>
+  <option value="4">All Stars (A)</option>
+  <option value="5">Eagles (A)</option>
+  <option value="6">The Joes (A)</option>
+  <option value="7">Eagles Mr Rental (A-Res)</option>
+  <option value="8">Mammoths (A-Res)</option>
+  <option value="9">USQ International (A-Res)</option>
+  <option value="10">Super Roosters (A-Res)</option>
+  <option value="11">All Stars Ballers United (A-Res)</option>
+  <option value="12">Oakey Hornets (A-Res)</option>
+  <option value="13">All Stars Bumblebees (B)</option>
+  <option value="14">Runnin Rebels Hawks (B)</option>
+  <option value="15">Runnin Rebels Beavers (B)</option>
+  <option value="16">Saint Hercules (B) </option>
+  <option value="17">Super Rosters (B)</option>
+  <option value="18">USQ Mammoths (B)</option>
+  <option value="19">Saints Steelers (W)</option>
+  <option value="20">Lions (W)</option>
+  <option value="21">Tigers (W)</option>
+  <option value="22">TBA U18 (W)</option>
+  <option value="23">All Stars (W)</option>
+  <option value="24">USQ Troopoers (W)</option>
+</select>
+Date: Example (1990-12-31T23:59:60Z)
+<input type="datetime" class="input" name="date"  id="date"/>
+<input type="submit" class="button button-primary" value="Create" id="createbtn"/>
+<div id="error"></div> 
+</div>
+</form> 
+	
+	</div>
+	
+	</div>
+
+<div id="footer" data-role="footer" data-position="fixed">
+
+	<h3>Toowoomba Basketball Association</h3>
+
+</div>
+</section>
+</body>
+</html>
