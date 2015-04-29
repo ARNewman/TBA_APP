@@ -1,0 +1,80 @@
+#header{
+	position: fixed;
+	height: 70px;
+	width: 100%;
+}
+
+#footer{
+	position: fixed;
+	color: #1e73be;
+}
+
+div #menubtn{
+	width: 10%;
+	height: 100%;
+	float: left;
+	padding-top: 1%;
+	padding-left: 1%;
+}
+
+#btn {
+	width: 100%;
+	height: 75%;
+	margin-top: 20%;
+	background-image: url("bars.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	
+}
+
+div #menu{
+	float: left;
+	width: 100%;
+	height: 100%;
+	padding: 0 auto;
+	margin: 0 auto;
+
+}
+
+div #hname{
+	float:left;
+	width: 89%;
+	margin: 0 auto;
+	padding: 0 auto;
+	
+}
+
+#hname{
+	height: 100%;
+	width: 100%;
+	color: #1e73be;
+}
+
+#header h1{
+
+	width: 80%;
+	height: 100%;
+}
+
+h1{
+	text-align: center;
+}
+
+
+@media ( min-width: 40em ) {
+	/* Show the table header rows and set all cells to display: table-cell */
+	.my-custom-breakpoint td,
+	.my-custom-breakpoint th,
+	.my-custom-breakpoint tbody th,
+	.my-custom-breakpoint tbody td,
+	.my-custom-breakpoint thead td,
+	.my-custom-breakpoint thead th {
+		display: table-cell;
+		margin: 0;
+	}
+	/* Hide the labels in each cell */
+	.my-custom-breakpoint td .ui-table-cell-label,
+	.my-custom-breakpoint th .ui-table-cell-label {
+		display: none;
+	}
+}
